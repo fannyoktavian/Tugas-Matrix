@@ -1,43 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="2. pengurangan matrix" />
-		<Option pch_mode="2" />
-		<Option compiler="gcc" />
-		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/2. pengurangan matrix" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/2. pengurangan matrix" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-			<Add option="-fexceptions" />
-		</Compiler>
-		<Unit filename="main.cpp" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-			<lib_finder disable_auto="1" />
-		</Extensions>
-	</Project>
-</CodeBlocks_project_file>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    int matA[2][2]= {4, 2, 8, 10};
+    int matB[2][2]= {-5, 8, 4, -12};
+    int j,k;
+    cout<< "Matrix A"<< endl;
+    for (int i=0;i<2;i++){
+        for (int j=0;j<2;j++){
+            cout << matA[i][j]<<"  ";
+        }
+        cout << endl;
+    }
+    cout << "Matrix B"<<endl;
+    for (int i=0;i<2;i++){
+        for (int j=0;j<2;j++){
+            cout <<matB[i][j]<<"  ";
+        }
+        cout << endl;
+    }
+    cout << "Hasil pen=jumlahan Matrix A dan B"<<endl;
+    for (int i=0;i<2;i++){
+        for (int j=0;j<2;j++){
+            cout <<matA[i][j]+matB[i][j]<< "  ";
+        }
+        cout << endl;
+}
+}
